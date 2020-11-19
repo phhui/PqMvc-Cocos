@@ -4,6 +4,7 @@ class SysCmd{
     static RESIZE:string="stage_resize";
 
     static LOAD_CONFIG:string="load_config";
+    static LOAD_RES:string="load_res";
     static LOAD_MODULE_RES:string="load_module_res";
     static CONFIG_COMPLETE:string="load_complete";
 }

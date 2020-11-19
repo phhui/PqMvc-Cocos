@@ -7,15 +7,15 @@ class LoadMgr extends PqMvc{
         this.registerEvent();
     }
     private registerEvent(){
+        this.on(SysCmd.LOAD_RES,this.loadRes,this);
         this.on(SysCmd.LOAD_CONFIG,this.loadConfig,this);
         this.on(SysCmd.LOAD_MODULE_RES,this.loadModule,this);
     }
     private async loadConfig(){
-        RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.groupLoaded,this);
-        RES.addEventListener( RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadErr, this );
-        await RES.loadConfig("resource/default.res.json", "resource/");
-        await RES.loadGroup("preload",0);
-        await RES.loadGroup("baseRes",1);
+
+    }
+    private loadRes(){
+
     }
     private onResourceLoadErr(e:RES.ResourceEvent){
         console.log(JSON.stringify(e.data));
@@ -31,7 +31,7 @@ class LoadMgr extends PqMvc{
             break;
         }
     }
-    private loadModule(event:string,name:string=null){
+    private loadModule(event:string,name:string=null){ 
         //console.log("load module>>"+name);
         Loading.self.show("正在加载模块资源...");
         this.loadList.push(name);
