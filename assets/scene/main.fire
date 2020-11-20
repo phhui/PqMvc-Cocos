@@ -171,7 +171,7 @@
       "array": [
         0,
         0,
-        524.8113946933698,
+        0,
         0,
         0,
         0,
@@ -282,8 +282,6 @@
       "__id__": 2
     },
     "_enabled": true,
-    "label": null,
-    "text": "hello",
     "_id": "b08Lfmd7hEkZPQ4p3Nu+yi"
   }
 ]

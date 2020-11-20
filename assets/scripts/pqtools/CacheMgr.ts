@@ -20,7 +20,7 @@ class CacheMgr{
     }
     /**移除缓存 */
     public removeCache(key:string){
-        egret.localStorage.removeItem(key);
+        cc.sys.localStorage.removeItem(key);
     }
     /**----【缓存用户数据】----    
      * saveUserCache(缓存名称，缓存内容，缓存有效期(分钟))    
@@ -38,14 +38,14 @@ class CacheMgr{
     }
     /**移除用户数据 */
     public removeUserCache(key:string){
-        egret.localStorage.removeItem(this.cacheKey+"_"+key);
+        cc.sys.localStorage.removeItem(this.cacheKey+"_"+key);
     }
     private save_cache(key:string,data:any,period:number=0){
-        egret.localStorage.setItem(key, period>0?JSON.stringify({t:new Date().getTime(),data:data,period:period}):JSON.stringify(data));
+        cc.sys.localStorage.setItem(key, period>0?JSON.stringify({t:new Date().getTime(),data:data,period:period}):JSON.stringify(data));
     }
     private get_cache(key:string){
         try{
-            var data = JSON.parse(<string>egret.localStorage.getItem(key));
+            var data = JSON.parse(<string>cc.sys.localStorage.getItem(key));
             if(data.period!=0)return data;
             let t:number=new Date().getTime();
             if(parseInt(data.period)!=0&&t-parseInt(data.t)>parseInt(data.period)*60*1000){
@@ -54,10 +54,10 @@ class CacheMgr{
             }
             return data.data;
         }catch(err){
-            return egret.localStorage.getItem(key);
+            return cc.sys.localStorage.getItem(key);
         }
     }
     public clearCache(){
-        egret.localStorage.clear();
+        cc.sys.localStorage.clear();
     }
 }

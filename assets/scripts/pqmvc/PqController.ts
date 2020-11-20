@@ -1,6 +1,6 @@
 import PqUi from "./PqUi";
 
-class PqController extends PqBase implements IControl{
+export default class PqController extends PqBase implements IControl{
 	//static NAME:String="继承此类必需定义该NAME，且名字和文件名一样,如文件名为XXController,则NAME值为XXController";
 	private _inited:Boolean=false;
 	/**等待处理的事件列表，inited为false时所有事件都存储在这里，为true后遍历触发**/
