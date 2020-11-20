@@ -1,7 +1,7 @@
 import MapsCmd from "./MapsCmd";
 import MapsController from "./MapsController";
 
-class MapsMgr extends BaseMgr{
+export default class MapsMgr extends BaseMgr{
     constructor(){
         super();
     }
