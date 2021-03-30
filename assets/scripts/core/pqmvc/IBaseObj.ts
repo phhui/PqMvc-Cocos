@@ -1,0 +1,4 @@
+interface IBaseObject
+{
+	destory():void;
+}
