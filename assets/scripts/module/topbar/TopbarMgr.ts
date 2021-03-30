@@ -3,7 +3,7 @@ import BaseMgr from '../base/BaseMgr';
 import TopbarCmd from './TopbarCmd';
 import TopbarCtl from './TopbarCtl';
 import TopbarProxy from './TopbarProxy';
-export default class TopbarMgr extends BaseMgr{
+class TopbarMgr extends BaseMgr{
     constructor(){
         super();
     }

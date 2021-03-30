@@ -1,6 +1,6 @@
 import PlayerCmd from "./PlayerCmd";
 
-export default class PlayerProxy extends BaseProxy{
+class PlayerProxy extends BaseProxy{
     static NAME:string="PlayerProxy";
     public size:number=500;
 	public execute(param:any=null, type:string=null):void{

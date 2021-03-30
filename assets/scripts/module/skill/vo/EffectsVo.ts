@@ -6,7 +6,7 @@
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\vo\EffectVo.ts
  */
-export default class EffectsVo{
+class EffectsVo{
     /**特效id*/
     public Tid:string
     /**文本名*/

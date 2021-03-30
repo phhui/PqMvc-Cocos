@@ -3,7 +3,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class ShowAllScale extends cc.Component {
+class ShowAllScale extends cc.Component {
 
     start () {
         ShowAllScale.AdaptorDesign(this.node);

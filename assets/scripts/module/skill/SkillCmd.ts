@@ -1,5 +1,5 @@
 
-export default class SkillCmd{
+class SkillCmd{
     public static MODULE_NAME:string='Skill';
     public static SHOW_WINDOW:string='Skill_show_window';
     public static CLOSE_WINDOW:string='Skill_close_window';

@@ -1,6 +1,4 @@
-import PqProxy from "../../core/pqmvc/PqProxy";
-
-export default class BaseProxy extends PqProxy{
+class BaseProxy extends PqProxy{
     static NAME:string="BaseProxy";
     protected get(url: string, param: any, onComplete: Function, target: any, errorFunc?) {
         // HttpHelper.get(url, param, (obj: any) => {

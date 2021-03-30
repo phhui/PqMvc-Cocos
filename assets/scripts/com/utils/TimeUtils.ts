@@ -6,7 +6,7 @@
  * @ Description:
  */
 
-export default class TimeUtils{
+class TimeUtils{
     /**1小时毫秒数 */
     public static HMS:number=60*60*1000;
     /**1分钟毫秒值 */

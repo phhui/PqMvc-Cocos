@@ -1,6 +1,4 @@
-import PqBase from "./PqBase";
-
-export default class PqProxy extends PqBase implements IProxy{
+class PqProxy extends PqBase implements IProxy{
 	//static NAME:String="继承此类必需定义该NAME，且名字和文件名一样,如文件名为XXProxy,则NAME值为XXProxy";
     constructor(){
 		super();

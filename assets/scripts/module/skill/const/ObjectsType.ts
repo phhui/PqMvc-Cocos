@@ -6,7 +6,7 @@
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\const\ObjectsType.ts
  */
-export default class ObjectsType{
+class ObjectsType{
     //======主动技能作用对象类型======
     /**未配置作用对象 */
     public static SKILL_NO:number=0;

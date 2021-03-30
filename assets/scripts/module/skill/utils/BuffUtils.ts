@@ -12,7 +12,7 @@ import BuffVo from "../vo/BuffVo";
  * @Description: BUFF逻辑类
  * @FilePath: \ro\assets\Script\modules\skill\utils\BuffUtils.ts
  */
-export default class BuffUtils{
+class BuffUtils{
     /**BUFF结算
      * @param m 触发目标
      * @param bv buff数据

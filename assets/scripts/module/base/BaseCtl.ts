@@ -1,9 +1,4 @@
-import PqController from "../../core/pqmvc/PqController";
-import ResPxy from "../proxy/ResPxy";
-import UiPxy from "../proxy/UiPxy";
-import SysCmd from "../public/SysCmd";
-
-export default class BaseCtl extends PqController{
+class BaseCtl extends PqController{
     static NAME:string="BaseController";
     protected moduleName:string;
     constructor(_moduleName:string=null){
@@ -57,18 +52,5 @@ export default class BaseCtl extends PqController{
     }
     destory(){
         this.active=false;
-    }
-    closeAllUi(){
-        UiPxy.closeAllUi();
-    }
-    /**对接旧项目加载Scene */
-    loadScene(name,cb){
-        ResPxy.loadScene(name,cb,this);
-    }
-    loadPrefab(path,cb){
-        ResPxy.loadPrefab(path,cb,this);
-    }
-    loadSpine(name,cb){
-        ResPxy.loadSpine(name,cb,this);
     }
 }

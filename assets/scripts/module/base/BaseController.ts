@@ -1,5 +1,4 @@
-import PqController from '../../pqmvc/PqController';
-export default class BaseController extends PqController{
+class BaseController extends PqController{
     static NAME:string="BaseController";
     constructor(){
         super();

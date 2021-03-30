@@ -1,4 +1,4 @@
-export default class PointUtils{
+class PointUtils{
     /**计算两点间距离 */
     public static getDis(p1,p2){
         return p1.sub(p2).mag();

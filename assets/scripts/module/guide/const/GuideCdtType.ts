@@ -1,4 +1,4 @@
-export default class GuideCdtType{
+class GuideCdtType{
     /**主线进度小于 */
     public static MAIN_LESSTHAN:number=1;
     /**主线进度大于等于 */

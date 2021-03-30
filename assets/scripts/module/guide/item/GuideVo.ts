@@ -1,4 +1,4 @@
-export default class GuideVo{
+class GuideVo{
     /**编号*/
     public Tid:number;
     /**触发条件"[enum]

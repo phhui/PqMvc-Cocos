@@ -1,12 +1,12 @@
 /**
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:18
- * @ Modified by: phhui
- * @ Modified time: 2021-01-28 16:52:34
+ * @ Modified by: Your name
+ * @ Modified time: 2021-03-30 21:51:59
  * @ Description:
  */
 
-export default class BaseObject implements IBaseObject{
+class BaseObject implements IBaseObject{
     private _pool:Array<any>=[];
     private _poolType:string;
     constructor(){

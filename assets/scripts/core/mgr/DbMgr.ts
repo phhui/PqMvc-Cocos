@@ -2,14 +2,12 @@
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:18
  * @ Modified by: phhui
- * @ Modified time: 2021-01-28 16:51:59
+ * @ Modified time: 2021-03-30 22:00:01
  * @ Description:
  */
 
-import RandomUtils from "../../com/utils/RandomUtils";
-
-export default class DbMgr{
-    private static _key:string="yonyow_com_";
+class DbMgr{
+    private static _key:string="ppqq_com_";
     public static _init(){
         if(this.get(this._key+"uid"))return;
         this.save(this._key+"uid","uid"+new Date().getTime()+RandomUtils.getRandom(4));

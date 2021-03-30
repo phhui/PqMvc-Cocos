@@ -6,7 +6,7 @@
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\const\EffectType.ts
  */
-export default class EffectType{
+class EffectType{
     /**无*/
     public static NO:number=0;
     /**直接伤害百分比*/

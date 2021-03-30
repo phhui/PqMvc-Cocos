@@ -1,4 +1,4 @@
-export default class ResVo{
+class ResVo{
     public name:string;
     public type:string;
     public url:string;

@@ -1,5 +1,5 @@
 
-export default class GuideCmd{
+class GuideCmd{
     public static MODULE_NAME:string='Guide';
     public static SHOW_WINDOW:string='Guide_show_window';
     public static CLOSE_WINDOW:string='Guide_close_window';

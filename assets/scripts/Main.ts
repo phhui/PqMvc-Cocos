@@ -3,7 +3,7 @@ import MapsCmd from "./module/maps/MapsCmd";
 
 const {ccclass, property} = cc._decorator;
 @ccclass
-export default class Main extends cc.Component {
+class Main extends cc.Component {
     onLoad () {
         new Register();
         EventHelper.on(SysCmd.CONFIG_COMPLETE,this.createGame,this);

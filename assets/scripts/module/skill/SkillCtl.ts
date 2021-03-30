@@ -3,7 +3,7 @@ import SkillCmd from "./SkillCmd";
 import SkillProxy from "./SkillProxy";
 import SkillUi from "./SkillUi";
 
-export default class SkillCtl extends BaseCtl{
+class SkillCtl extends BaseCtl{
     public static NAME:string='SkillController';
     private pxy:SkillProxy;
     private uiScript:SkillUi;

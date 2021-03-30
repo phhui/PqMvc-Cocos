@@ -1,4 +1,4 @@
-export default class GNum{
+class GNum{
     public static  MAXLEN_NAME=22;	//名字长度
     public static  MAXLEN_URL=160;//url长度
     public static  STRMAXLEN_KEY=16;//CheckKey长度

@@ -9,7 +9,7 @@
 import Timer from "../../com/utils/Timer";
 import ResPxy from "../proxy/ResPxy";
 
-export default class FloatText{
+class FloatText{
     private static _self:FloatText;
     private pool:Array<cc.Node>=[];
     private pf:cc.Prefab;

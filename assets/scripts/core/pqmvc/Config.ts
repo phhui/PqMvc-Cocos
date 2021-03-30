@@ -2,11 +2,11 @@
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:18
  * @ Modified by: phhui
- * @ Modified time: 2021-01-28 16:52:37
+ * @ Modified time: 2021-03-30 21:56:55
  * @ Description:
  */
 
-export default class Config{
+class Config{
 	static urlList: Array<any> = [];
 	public static configDict:any={};
 	constructor()

@@ -6,7 +6,7 @@
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\const\BuffType.ts
  */
-export default class BuffType{
+class BuffType{
     /**无*/
     public static NO:number=0;
     /**伤害提升*/

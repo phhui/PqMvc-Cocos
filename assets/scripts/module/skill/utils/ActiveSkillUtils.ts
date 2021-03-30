@@ -15,7 +15,7 @@ import BuffUtils from "./BuffUtils";
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\utils\ActiveSkillUtils.ts
  */
-export default class ActiveSkillUtils{
+class ActiveSkillUtils{
     private static monScriptName:string="Monster";
     /**主动技能结算 */
     public static skillClose(v:SkillVo,partnerList:Array<cc.Node>,enemyList:Array<cc.Node>){

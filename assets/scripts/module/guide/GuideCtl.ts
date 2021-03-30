@@ -1,11 +1,4 @@
-import Timer from "../../com/utils/Timer";
-import BaseCtl from "../base/BaseCtl";
-import GuideCmd from "./GuideCmd";
-import GuideProxy from "./GuideProxy";
-import GuideUi from "./GuideUi";
-import GuideVo from "./item/GuideVo";
-
-export default class GuideCtl extends BaseCtl{
+class GuideCtl extends BaseCtl{
     public static NAME:string='GuideController';
     private pxy:GuideProxy;
     private uiScript:GuideUi;
@@ -33,14 +26,6 @@ export default class GuideCtl extends BaseCtl{
     }
     protected show(){
         if(!this.inited){
-            this.loadPrefab("modules/guide/Guide",(pf)=>{
-                if(this.inited)return;
-                this.ui=cc.instantiate(pf);
-                this.uiScript=this.ui.getComponent("GuideUi");
-                this.init();
-                this.inited=true;
-                this.showWindow(5);
-            });
         }else this.showWindow(5);
     }
     public logic(){

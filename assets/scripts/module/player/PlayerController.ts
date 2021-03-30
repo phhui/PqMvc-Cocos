@@ -4,7 +4,7 @@ import PlayerCmd from "./PlayerCmd";
 import PlayerProxy from "./PlayerProxy";
 import PlayerView from "./PlayerView";
 
-export default class PlayerController extends BaseController{
+class PlayerController extends BaseController{
     static NAME:string="PlayerController";
     private pxy:PlayerProxy;
     private bgDict:Object;

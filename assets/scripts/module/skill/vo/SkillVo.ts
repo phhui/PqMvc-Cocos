@@ -11,7 +11,7 @@ import EffectsVo from "./EffectsVo";
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\vo\SkillVo.ts
  */
-export default class SkillVo{
+class SkillVo{
     /**所属怪物UUID */
     public monUuid:string;
     /**技能所属怪物，需求太复杂，不存储施法对象很难处理*/

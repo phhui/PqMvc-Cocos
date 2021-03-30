@@ -2,13 +2,11 @@
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:19
  * @ Modified by: phhui
- * @ Modified time: 2021-01-28 16:52:56
+ * @ Modified time: 2021-03-30 21:57:53
  * @ Description:
  */
 
-import PqMvc from "./PqMvc";
-
-export default class PqMgr extends PqMvc{
+class PqMgr extends PqMvc{
     private commandDict:Object={};
 	private controlDict:Object={};
 	private static proxyDict:Object={};

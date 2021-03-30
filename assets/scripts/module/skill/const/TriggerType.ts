@@ -1,4 +1,4 @@
-export default class TriggerType{
+class TriggerType{
     /**无*/
     public static PASSIVE_NO:number=0;
     /**物攻直接加成*/

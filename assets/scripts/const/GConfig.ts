@@ -1,4 +1,4 @@
-export default class GConfig{
+class GConfig{
     public static serverUrl="ws://login.5110.cc:11001";
     public static version="1.0";
     public static platform="pc";
