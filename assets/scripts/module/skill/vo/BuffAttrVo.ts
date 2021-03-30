@@ -7,7 +7,7 @@
  * @FilePath: \ro\assets\Script\modules\fight\vo\BuffAttrVo.ts
  */
 /**由BUFF产生的属性 */
-export default class BuffAttrVo{
+class BuffAttrVo{
     /**回光返归--死亡后继续战斗X秒 */
     public huiGuangHuanZhao:boolean=false;
     /**额外的物理攻击 */

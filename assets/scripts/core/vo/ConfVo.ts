@@ -1,7 +1,7 @@
 import GroupVo from "./GroupVo";
 import ResVo from "./ResVo";
 
-export default class ConfVo{
+class ConfVo{
     public groups:Array<GroupVo>;
     public resources:Array<ResVo>;
     constructor(data:string=null){

@@ -6,7 +6,7 @@
  * @Description: 被动技能触发时刻
  * @FilePath: \ro\assets\Script\modules\skill\const\TimeParameterType.ts
  */
-export default class TimeParameterType{
+class TimeParameterType{
     /**远程 */
     public static FAR:number=1;
     /**近战 */

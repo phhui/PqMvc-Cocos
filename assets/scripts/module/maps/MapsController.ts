@@ -2,7 +2,7 @@ import BaseController from '../base/BaseController';
 import PlayerCmd from '../player/PlayerCmd';
 import MapsCmd from './MapsCmd';
 import MapsView from './MapsView';
-export default class MapsController extends BaseController{
+class MapsController extends BaseController{
     static NAME:string="MapsController";
     private pxy:MapsProxy;
     private bgDict:Object;

@@ -6,7 +6,7 @@
  * @Description: 
  * @FilePath: \ro\assets\Script\com\utils\PrefabUtils.ts
  */
-export default class PrefabUtils{
+class PrefabUtils{
     public static initPf(pf:cc.Prefab,parent:cc.Node):cc.Node{
         let nd:cc.Node=cc.instantiate(pf);
         nd.parent=parent;

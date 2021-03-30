@@ -4,7 +4,7 @@ import Monster from "../fight/Item/Monster";
 import ResPxy from "../proxy/ResPxy";
 import BuffVo from "./vo/BuffVo";
 
-export default class BuffEff{
+class BuffEff{
     private parent:cc.Node;
     private v:BuffVo;
     private target:Monster;

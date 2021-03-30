@@ -11,7 +11,7 @@ import SkillVo from "../vo/SkillVo";
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\utils\SkillUtils.ts
  */
-export default class SkillUtils{
+class SkillUtils{
     /**策划文档的数值：http://wiki.alienidea.com/pages/viewpage.action?pageId=36585205 */
     private static spaceList:Array<number>=[0,144,144,116,107,94,85,78,67,61,55,50,46,42,39];
     /**根据技能数量获取技能卡间隔 */

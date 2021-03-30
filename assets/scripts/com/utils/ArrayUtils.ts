@@ -6,7 +6,7 @@
  * @ Description:
  */
 
-export default class ArrayUtils{
+class ArrayUtils{
     /**根据字符串获得二维数组，
      * @param str要分割的字符串
      * @param splitChar0 1级数组分割符

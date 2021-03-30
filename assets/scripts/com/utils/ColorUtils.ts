@@ -2,13 +2,10 @@
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:18
  * @ Modified by: phhui
- * @ Modified time: 2021-01-28 16:53:27
+ * @ Modified time: 2021-03-30 22:01:16
  * @ Description:
  */
-
-import NumUtils from "./NumUtils";
-
-export default class ColorUtils{
+class ColorUtils{
     public static DefColor:cc.Color=cc.color().fromHEX("603015");
     public static RedColor:cc.Color=cc.color().fromHEX("ff0000");
     public static GreenColor:cc.Color=cc.color().fromHEX("008000");

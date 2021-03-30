@@ -1,6 +1,4 @@
-import ObjPxy from "../../proxy/ObjPxy";
-
-export default class GuideData{
+class GuideData{
     /**玩家等级 */
     public lv:number=0;
     /**所处界面 */
@@ -21,10 +19,4 @@ export default class GuideData{
     public canLock:boolean=false;
     /**拥有可解锁且伙伴 */
     public canLockAndLv2:boolean=false;
-    public get chapterId(){
-        return ObjPxy.chapterLogic.getCurMaxChapterID();
-    }
-    public get chapterLevelId(){
-        return ObjPxy.chapterLogic.getMaxMiniChapter();
-    }
 }

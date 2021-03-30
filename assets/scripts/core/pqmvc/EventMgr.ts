@@ -1,12 +1,12 @@
 /**
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:18
- * @ Modified by: phhui
- * @ Modified time: 2021-02-02 15:43:02
+ * @ Modified by: Your name
+ * @ Modified time: 2021-03-30 21:53:20
  * @ Description:
  */
 
-export default class EventMgr{
+class EventMgr{
     public static listenList:Object={};
     public static _objPool:Array<any>=[];
     public static _ctrl:Object={};

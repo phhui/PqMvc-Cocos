@@ -7,7 +7,7 @@
  * @FilePath: \ro\assets\Script\com\utils\Tween.ts
  */
 
-export default class Tween{
+class Tween{
     /**
      * @description: 从当前缓动到B
      * @param {cc} nd 缓动节点

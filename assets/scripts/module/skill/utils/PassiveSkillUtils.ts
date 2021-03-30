@@ -16,7 +16,7 @@ import BuffUtils from "./BuffUtils";
  * @Description: 被动技能逻辑类
  * @FilePath: \ro\assets\Script\modules\skill\utils\PassiveSkillUtils.ts
  */
-export default class PassiveSkillUtils{
+class PassiveSkillUtils{
     /**触发被动技能    
      * @param m       自己    
      * @param target  攻击时为目标敌人，被攻击时为攻击者    

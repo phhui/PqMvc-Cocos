@@ -1,4 +1,4 @@
-export default class SysCmd{
+class SysCmd{
     /**打开窗口，传prefab路径，会自动加载并显示 */
     // public static OPEN_WINDOW:string="sys_open_window";//旧项目版本太低，加载不通用
     /**显示窗口，传node */

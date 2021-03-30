@@ -3,7 +3,7 @@ import PlayerCmd from "./PlayerCmd";
 import PlayerController from "./PlayerController";
 import PlayerProxy from "./PlayerProxy";
 
-export default class PlayerMgr extends BaseMgr{
+class PlayerMgr extends BaseMgr{
     constructor(){
         super();
     }

@@ -6,7 +6,7 @@
  * @Description: 
  * @FilePath: \ro\assets\Script\const\AniType.ts
  */
-export default class AniType{
+class AniType{
     public static PLAY:string="play";
     public static STOP:string="stop";
     public static PAUSE:string="pause";

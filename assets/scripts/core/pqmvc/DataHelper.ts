@@ -1,12 +1,12 @@
 /**
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:18
- * @ Modified by: phhui
- * @ Modified time: 2021-01-28 16:52:44
+ * @ Modified by: Your name
+ * @ Modified time: 2021-03-30 21:52:41
  * @ Description:
  */
 
-export default class DataHelper{
+class DataHelper{
 		static self: DataHelper = new DataHelper();
 		private dict: Object = {};
 		private total: Object = {};

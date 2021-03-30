@@ -4,7 +4,7 @@ import BaseUi from '../base/BaseUi';
 import UiPxy from '../proxy/UiPxy';
 const {ccclass, property} = cc._decorator;
 @ccclass
-export default class TopbarUi extends BaseUi{
+class TopbarUi extends BaseUi{
     @property(cc.Label)
     private expLb:cc.Label=null;
     @property(cc.Label)

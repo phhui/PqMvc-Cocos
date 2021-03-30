@@ -6,7 +6,7 @@
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\vo\PassiveSkillLvVo.ts
  */
-export default class PassiveSkillLvVo{
+class PassiveSkillLvVo{
     /**技能ID*/
     public Tid:number;
     /**等级*/

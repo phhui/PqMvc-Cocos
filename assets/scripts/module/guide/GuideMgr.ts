@@ -1,9 +1,4 @@
-
-import BaseMgr from '../base/BaseMgr';
-import GuideCmd from './GuideCmd';
-import GuideCtl from './GuideCtl';
-import GuideProxy from './GuideProxy';
-export default class GuideMgr extends BaseMgr{
+class GuideMgr extends BaseMgr{
     constructor(){
         super();
     }

@@ -1,5 +1,5 @@
 import BaseUi from '../base/BaseUi';
-export default class MapsView extends BaseUi{
+class MapsView extends BaseUi{
     private btn:cc.Button;
     constructor(){
         super();

@@ -2,13 +2,10 @@
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:18
  * @ Modified by: phhui
- * @ Modified time: 2021-01-28 16:53:43
+ * @ Modified time: 2021-03-30 22:01:23
  * @ Description:
  */
-
-import GConfig from "../../const/GConfig";
-import GNum from "../../const/GNum";
-export default class NumUtils{
+class NumUtils{
     /**中文数量单位对应的单位["","万","亿","兆","京","垓","秭","穰","沟","涧","正","载","极"] */
     public static CnNumUnit:Array<string>=["","万","亿","兆","京","垓","秭","穰","沟","涧","正","载","极"];
     /**英文数量单位对应的单位["K","M","G","T","P","E","Z","Y","B","N","D"] */

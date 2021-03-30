@@ -1,5 +1,5 @@
 
-export default class TopbarCmd{
+class TopbarCmd{
     public static MODULE_NAME:string='Topbar';
     public static SHOW_WINDOW:string='Topbar_show_window';
     public static CLOSE_WINDOW:string='Topbar_close_window';

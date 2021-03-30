@@ -4,7 +4,7 @@ import Monster from '../fight/Item/Monster';
 import TbPxy from '../proxy/TbPxy';
 import SkillCmd from './SkillCmd';
 import SkillVo from './vo/SkillVo';
-export default class SkillProxy extends BaseProxy{
+class SkillProxy extends BaseProxy{
     static NAME:string='SkillProxy';
 	public skillList:Array<SkillVo>;
 	public maxSkillNum:number=15;

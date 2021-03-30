@@ -1,15 +1,13 @@
-import AniType from "../../const/AniType";
-import ResPxy from "../../modules/proxy/ResPxy";
 
-/*
- * @Author: phhui
+ /* @ Modified by: phhui
+ * @ Modified time: 2021-03-30 22:01:09
  * @Date: 2021-03-17 10:00:22
  * @LastEditTime: 2021-03-17 11:39:24
  * @LastEditors: phhui
  * @Description: 
  * @FilePath: \ro\assets\Script\com\utils\AniUtils.ts
  */
-export default class AniUtils{
+class AniUtils{
     /**初始化动画预制体并添加结束回调 */
     public static initAni(pf:cc.Prefab,parent:cc.Node=null,cb:Function=null,target:any=null):cc.Node{
         let nd:cc.Node=cc.instantiate(pf);

@@ -6,7 +6,7 @@
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\const\ConditionType.ts
  */
-export default class ConditionType{
+class ConditionType{
     /**无*/
     public static PASSIVE_NO:number=0;
     /**形态压制*/

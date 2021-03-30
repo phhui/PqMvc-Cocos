@@ -7,7 +7,7 @@
  */
 
 /**此类只是为了减少代码量设计的，无其它用途 */
-export default class CUtils{
+class CUtils{
     /**获取节点世界坐标,不确定有没有BUG */
     public static getPos(nd:cc.Node){
         let x:number=nd.x;

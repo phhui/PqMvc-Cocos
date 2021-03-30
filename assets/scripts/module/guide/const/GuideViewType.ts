@@ -1,4 +1,4 @@
-export default class GuideViewType{
+class GuideViewType{
     /**世界树 */
     public static TREE:number=162;
     /**浮空岛 */

@@ -1,7 +1,7 @@
 import BaseUi from "../base/BaseUi";
 import PlayerCmd from "./PlayerCmd";
 
-export default class PlayerView extends BaseUi{
+class PlayerView extends BaseUi{
     private p:Player;
     constructor(){
         super();

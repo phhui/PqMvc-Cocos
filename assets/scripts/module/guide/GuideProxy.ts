@@ -1,16 +1,4 @@
-
-import DbMgr from '../../core/mgr/DbMgr';
-import Log from '../../core/mgr/Log';
-import BaseProxy from '../base/BaseProxy';
-import ObjPxy from '../proxy/ObjPxy';
-import pxy from '../proxy/pxy';
-import TbPxy from '../proxy/TbPxy';
-import GuideCdtType from './const/GuideCdtType';
-import GuideViewType from './const/GuideViewType';
-import GuideCmd from './GuideCmd';
-import GuideData from './item/GuideData';
-import GuideVo from './item/GuideVo';
-export default class GuideProxy extends BaseProxy{
+class GuideProxy extends BaseProxy{
     static NAME:string='GuideProxy';
 	public gd:GuideData=new GuideData();
 	public guide:Array<GuideVo>=[];
@@ -34,7 +22,7 @@ export default class GuideProxy extends BaseProxy{
     public initData(){
 		if(this.inited)return;
 		this.inited=true;
-		let data=TbPxy.getGuideTb();
+		let data;//=TbPxy.getGuideTb();
 		let history=DbMgr.get("guideData");
 		let m:number=history?history.length:0;
 		let n:number=data.length;
@@ -45,10 +33,10 @@ export default class GuideProxy extends BaseProxy{
 			}
 			this.guide.push(g);
 		}
-		this.gd.partnerList=TbPxy.getLineupList();
+		// this.gd.partnerList=TbPxy.getLineupList();
     }
 	private triggerTarget(id){
-		let gv:GuideVo=new GuideVo(TbPxy.getGuideObj(id));
+		let gv:GuideVo;//=new GuideVo(TbPxy.getGuideObj(id));
 		if(gv){
 			this.gd.view=0;
 			this.emit(GuideCmd.SHOW_WINDOW,gv);
@@ -70,7 +58,7 @@ export default class GuideProxy extends BaseProxy{
 	}
 	private checkTrigger(){
 		let n:number=this.guide.length;
-		this.gd.onHook=this.hookTime;
+		// this.gd.onHook=this.hookTime;
 		this.checkCanLock();
 		for(let i:number=0;i<n;i++){
 			if(this.checkCondition(this.guide[i])){
@@ -85,16 +73,16 @@ export default class GuideProxy extends BaseProxy{
 		for(let i:number=0;i<gv.Condition.length;i++){
 			switch(gv.Condition[i]){
 				case GuideCdtType.MAIN_LESSTHAN:
-					res=this.gd.chapterLevelId<parseInt(gv.Threshold[i]);
+					// res=this.gd.chapterLevelId<parseInt(gv.Threshold[i]);
 				break;
 				case GuideCdtType.MAIN_ATLEAST:
-					res=this.gd.chapterLevelId>=parseInt(gv.Threshold[i]);
+					// res=this.gd.chapterLevelId>=parseInt(gv.Threshold[i]);
 				break;
 				case GuideCdtType.CHAPTER_UNCLEARED:
-					res=this.gd.chapterId<=parseInt(gv.Threshold[i]);
+					// res=this.gd.chapterId<=parseInt(gv.Threshold[i]);
 				break;
 				case GuideCdtType.CHAPTER_CLEARED:
-					res=this.gd.chapterId>parseInt(gv.Threshold[i]);
+					// res=this.gd.chapterId>parseInt(gv.Threshold[i]);
 				break;
 				case GuideCdtType.LOCATE_AT:
 					let view:Array<any>=gv.Threshold[i].split("||");
@@ -107,7 +95,7 @@ export default class GuideProxy extends BaseProxy{
 				case GuideCdtType.PARTNER_OWNED:
 					if(this.gd.view==GuideViewType.PARTNER){
 						let n:number=this.gd.partnerList.length;
-						let num:number=ObjPxy.cardLogic.getLineUpInfo().length;
+						let num:number;//=ObjPxy.cardLogic.getLineUpInfo().length;
 						for(let i:number=0;i<n;i++){
 							if(this.gd.partnerList[i].lv>0)num++;
 						}
@@ -141,7 +129,7 @@ export default class GuideProxy extends BaseProxy{
 		let canLock:boolean=false;
 		let canLockLv2:boolean=false;
 		for(let i:number=0;i<n;i++){
-			let cl=pxy.getLineupLock(this.gd.partnerList[i]);
+			let cl;//=pxy.getLineupLock(this.gd.partnerList[i]);
 			if(cl)canLock=true;
 			if(cl&&this.gd.partnerList[i].lv>=2)canLockLv2=true;
 		}
@@ -149,7 +137,7 @@ export default class GuideProxy extends BaseProxy{
 		this.gd.canLockAndLv2=canLockLv2;
 	}
 	private get hookTime(){
-		return ObjPxy.hookLogic.getHookInfo().showTime;
+		return //ObjPxy.hookLogic.getHookInfo().showTime;
 	}
 	private saveData(g:GuideVo){
 		if(!g.CanRepeat)return;

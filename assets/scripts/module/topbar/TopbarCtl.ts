@@ -3,7 +3,7 @@ import TopbarCmd from "./TopbarCmd";
 import TopbarProxy from "./TopbarProxy";
 import TopbarUi from "./TopbarUi";
 
-export default class TopbarCtl extends BaseCtl{
+class TopbarCtl extends BaseCtl{
     public static NAME:string='TopbarController';
     private pxy:TopbarProxy;
     private uiScript:TopbarUi;

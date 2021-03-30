@@ -3,7 +3,7 @@ import BaseMgr from '../base/BaseMgr';
 import SkillCmd from './SkillCmd';
 import SkillCtl from './SkillCtl';
 import SkillProxy from './SkillProxy';
-export default class SkillMgr extends BaseMgr{
+class SkillMgr extends BaseMgr{
     constructor(){
         super();
     }

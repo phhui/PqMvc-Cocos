@@ -1,8 +1,5 @@
+import BaseUi from "../base/BaseUi";
 
-import BaseUi from '../base/BaseUi';
-import ObjPxy from '../proxy/ObjPxy';
-import GuideCmd from './GuideCmd';
-import GuideVo from './item/GuideVo';
 const {ccclass, property} = cc._decorator;
 @ccclass
 export default class GuideUi extends BaseUi{
@@ -31,7 +28,7 @@ export default class GuideUi extends BaseUi{
     }
     public bindData(g:GuideVo){
         this.gv=g;
-        this.info.string=ObjPxy.uiLang.getConfigTxt(g.Description);
+        // this.info.string=ObjPxy.uiLang.getConfigTxt(g.Description);
         let sw:number=this.winWidth;
         let sh:number=this.winHeight;
         let x:number=g.Position[0];

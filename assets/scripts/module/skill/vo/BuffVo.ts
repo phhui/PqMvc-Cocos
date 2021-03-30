@@ -6,7 +6,7 @@
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\vo\BuffVo.ts
  */
-export default class BuffVo{
+class BuffVo{
     /**编号*/
     public Tid:number;
     /**是否为增益*/

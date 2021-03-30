@@ -3,7 +3,7 @@
 * 建议"get"一次后缓存好数据不要频繁使用"get对象key","字符key"不影响
 * 支持用对象作为key存储数据.
 */
-export default class Dictionary {
+class Dictionary {
 	public constructor() {
 		this._maps = {};
 		this._objKeys = [];

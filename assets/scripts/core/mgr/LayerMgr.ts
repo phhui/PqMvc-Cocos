@@ -2,14 +2,11 @@
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:18
  * @ Modified by: phhui
- * @ Modified time: 2021-01-29 14:29:03
+ * @ Modified time: 2021-03-30 22:00:08
  * @ Description:
  */
 
-import SysCmd from "../../modules/public/SysCmd";
-import EventMgr from "../pqmvc/EventMgr";
-
-export default class LayerMgr{
+class LayerMgr{
 	private map:cc.Node;
 	private scene:cc.Node;
 	private menu:cc.Node;

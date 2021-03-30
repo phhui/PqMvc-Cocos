@@ -1,4 +1,0 @@
-interface IBaseObject
-{
-	destory():void;
-}

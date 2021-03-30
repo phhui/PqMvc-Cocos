@@ -6,7 +6,7 @@
  * @ Description:
  */
 
-export default class Timer{
+class Timer{
     public static frame:number=60;
     public static farmeCount:number=0;
     public static s: number = 50;//计时间隔(毫秒)

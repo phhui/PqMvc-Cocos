@@ -7,7 +7,7 @@
  * @FilePath: \ro\assets\Script\modules\public\GStatus.ts
  */
 /**暂时弃用，待删除 */
-export default class GStatus{
+class GStatus{
     private static _fightStatus:number=0;
     public static set fightStatus(val:number){
         this._fightStatus=val;

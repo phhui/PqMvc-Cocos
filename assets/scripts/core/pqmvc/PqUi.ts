@@ -1,4 +1,3 @@
-import EventMgr from "./EventMgr";
 const {ccclass, property} = cc._decorator;
 @ccclass
 export default class PqUi extends cc.Component{

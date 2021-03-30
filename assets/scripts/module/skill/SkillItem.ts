@@ -12,7 +12,7 @@ import SkillVo from "./vo/SkillVo";
  */
 const {ccclass, property} = cc._decorator;
 @ccclass
-export default class SkillItem extends BaseUi{
+class SkillItem extends BaseUi{
     @property({type:[cc.Node]})
     private card:cc.Node[]=[];
     @property(cc.Node)

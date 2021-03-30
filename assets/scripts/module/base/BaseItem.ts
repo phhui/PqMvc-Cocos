@@ -8,7 +8,8 @@ import BaseUi from "./BaseUi";
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\base\BaseItem.ts
  */
-const {ccclass, property} = cc._decorator;
-@ccclass
-export default class BaseItem extends BaseUi{
+class BaseItem extends BaseUi{
+    constructor(){
+        super();
+    }
 }

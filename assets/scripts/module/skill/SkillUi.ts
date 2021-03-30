@@ -14,7 +14,7 @@ import SkillUtils from './utils/SkillUtils';
 import SkillVo from './vo/SkillVo';
 const {ccclass, property} = cc._decorator;
 @ccclass
-export default class SkillUi extends BaseUi{
+class SkillUi extends BaseUi{
     @property(cc.Node)
     private nd:cc.Node=null;
     @property(cc.Node)

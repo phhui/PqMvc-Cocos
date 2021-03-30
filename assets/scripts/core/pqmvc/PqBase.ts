@@ -1,7 +1,4 @@
-import DbMgr from "../mgr/DbMgr";
-import PqMgr from "./PqMgr";
-
-export default class PqBase{	
+class PqBase{	
     protected __md:PqMgr;
     constructor(){
 

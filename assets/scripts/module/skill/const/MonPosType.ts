@@ -1,4 +1,4 @@
-export default class MonPosType{
+class MonPosType{
         /**中心点位置*/
         public static MONSTER_POSTYPE_CENTER:number=0;
         /**血条位置*/

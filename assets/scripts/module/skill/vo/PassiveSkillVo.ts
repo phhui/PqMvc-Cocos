@@ -10,7 +10,7 @@ import EffectVo from "./EffectVo";
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\vo\PassiveSkillVo.ts
  */
-export default class PassiveSkillVo{
+class PassiveSkillVo{
     /**技能ID*/
     public Tid:number;
     /**别名*/

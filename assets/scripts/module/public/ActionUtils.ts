@@ -6,7 +6,7 @@
  * @Description: 别人写的，能用，凑合着用
  * @FilePath: \ro\assets\Script\modules\public\ActionUtils.ts
  */
-export default class ActionUtils{
+class ActionUtils{
     /**整型数字跳动 DigitNode 文本框，prefixStr 前缀（比如+号），suffixStr 后缀，srcDigit 原来的数字 
     *destDigit目标数字 scPerAnimate多少秒跳动一次数字，scTotal 总共用多少秒完成动画*/
    public static DigitAni(DigitNode:cc.Node,prefixStr:string="",srcDigit:number,destDigit:number,suffixStr:string="",scPerAnimate=0.4,scTotal=0.4)

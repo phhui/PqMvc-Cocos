@@ -2,15 +2,11 @@
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:19
  * @ Modified by: phhui
- * @ Modified time: 2021-01-28 16:52:59
+ * @ Modified time: 2021-03-30 21:57:59
  * @ Description:
  */
 
-import BaseObject from "./BaseObject";
-import DataHelper from "./DataHelper";
-import EventMgr from "./EventMgr";
-
-export default class PqMvc extends BaseObject{
+class PqMvc extends BaseObject{
 	constructor(){
 		super();
 	}

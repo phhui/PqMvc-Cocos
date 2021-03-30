@@ -6,7 +6,7 @@
  * @Description: 
  * @FilePath: \ro\assets\Script\modules\skill\vo\PassiveKillLvUpVo.ts
  */
-export default class PassiveKillLvUpVo{
+class PassiveKillLvUpVo{
     /**编号*/
     public Tid:number;
     /**技能等级*/
