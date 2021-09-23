@@ -2,11 +2,11 @@
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:18
  * @ Modified by: phhui
- * @ Modified time: 2021-01-28 16:54:00
+ * @ Modified time: 2021-09-06 18:13:15
  * @ Description:
  */
 
-class Timer{
+export default class Timer{
     public static frame:number=60;
     public static farmeCount:number=0;
     public static s: number = 50;//计时间隔(毫秒)
@@ -33,7 +33,7 @@ class Timer{
     static addListen(key: string, interval: number, callBack: Function, target: any, param: any = null, execNum: number = -1): void {
         if (!Timer.inited) Timer.init()
         if (Timer.timeEventList[key]) return;
-        if (interval*1000 < Timer.s) interval = Timer.s;
+        if (interval*1000 < Timer.s) interval = Timer.s*0.001;
         Timer.timeEventList[key] = Timer._newObj(key,callBack,target,param,Timer.farmeCount, interval*1000, execNum);
         if(!Timer.runTimer){
             Timer.time=setInterval(Timer.run,Timer.s);
@@ -86,6 +86,10 @@ class Timer{
             clearInterval(Timer.time);
             Timer.runTimer=false;
         }
+    }
+    static dot(key:string){
+        let d = new Date();
+        console.log(key+"--"+d.getTime());
     }
     static _newObj(key,func, target, param, time=null, interval=null, execNum=null){
         let obj;

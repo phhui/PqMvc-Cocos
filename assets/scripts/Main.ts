@@ -1,18 +1,22 @@
+import EventMgr from "./core/pqmvc/EventMgr";
 import Register from "./core/Register";
-import MapsCmd from "./module/maps/MapsCmd";
+import ModuleMgr from "./public/ModuleMgr";
+import SysCmd from "./public/SysCmd";
+
 
 const {ccclass, property} = cc._decorator;
 @ccclass
 class Main extends cc.Component {
-    onLoad () {
-        new Register();
-        EventHelper.on(SysCmd.CONFIG_COMPLETE,this.createGame,this);
-        EventHelper.emit(SysCmd.LOAD_CONFIG);
-    }
     start () {
+        new Register();
+        cc.debug.setDisplayStats(false);
     }
-    createGame(){
-        EventHelper.emit(MapsCmd.SHOW_WINDOW);
+    onEnable(){
+        let manager = cc.director.getCollisionManager(); 
+        manager.enabled = true;
+        manager.enabledDebugDraw=true;
+        ModuleMgr.loadModule("Modules",()=>{
+            EventMgr.emit(SysCmd.GAME_INIT);
+        },this);
     }
-    // update (dt) {}
 }

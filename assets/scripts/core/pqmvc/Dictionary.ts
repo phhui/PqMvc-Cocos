@@ -1,9 +1,17 @@
 /**
+ * @ Author: phhui
+ * @ Create Time: 2021-08-20 09:56:17
+ * @ Modified by: phhui
+ * @ Modified time: 2021-08-27 17:44:59
+ * @ Description:
+ */
+
+/**
 * 对象存储器,可根据字符名称和对象作为标签名来存储的数据.
 * 建议"get"一次后缓存好数据不要频繁使用"get对象key","字符key"不影响
 * 支持用对象作为key存储数据.
 */
-class Dictionary {
+export default class Dictionary {
 	public constructor() {
 		this._maps = {};
 		this._objKeys = [];

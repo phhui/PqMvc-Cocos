@@ -1,12 +1,12 @@
 /**
  * @ Author: phhui
- * @ Create Time: 2021-01-27 09:09:18
+ * @ Create Time: 2021-08-20 09:56:17
  * @ Modified by: phhui
- * @ Modified time: 2021-03-30 21:56:58
+ * @ Modified time: 2021-08-27 17:44:51
  * @ Description:
  */
 
-class ConfigVo{
+export default class ConfigVo{
 	public id: string;
     /**父级容器**/
     public pid: string;

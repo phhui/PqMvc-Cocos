@@ -34,7 +34,7 @@ class SoundHelper{
             }
         }
     }
-    static unpause(){
+    static unpause(name:string=null){
         for(let i:number=0;i<this.playList.length;i++){
             if(name){
                 if(this.playList[i].name==name)this.playList[i].c.unpause();

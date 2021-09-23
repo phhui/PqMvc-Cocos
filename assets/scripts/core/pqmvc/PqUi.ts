@@ -1,8 +1,19 @@
+/**
+ * @ Author: phhui
+ * @ Create Time: 2021-08-20 09:56:17
+ * @ Modified by: phhui
+ * @ Modified time: 2021-08-27 17:45:30
+ * @ Description:
+ */
+
+import BaseNode from "./BaseNode";
+import EventMgr from "./EventMgr";
+
 const {ccclass, property} = cc._decorator;
 @ccclass
-export default class PqUi extends cc.Component{
+export default class PqUi extends BaseNode{
     protected inited:boolean=false;
-    constructor() {
+    constructor(){
         super();
     }
     protected init(){

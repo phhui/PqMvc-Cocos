@@ -1,35 +1,33 @@
-/**
- * @ Author: phhui
- * @ Create Time: 2021-01-27 09:09:18
- * @ Modified by: phhui
- * @ Modified time: 2021-02-04 15:55:46
- * @ Description:
- */
+import { LoadMgr } from "./mgr/loader/LoadMgr";
 import LayerMgr from "./mgr/LayerMgr";
-import FightMgr from "../modules/fight/FightMgr";
-import SandboxMgr from "../modules/sandbox/SandboxMgr";
-import FightPrepareMgr from "../modules/fightprepare/FightPrepareMgr";
-import SkillMgr from "../modules/skill/SkillMgr";
-import TopbarMgr from "../modules/topbar/TopbarMgr";
-import GuideMgr from "../modules/guide/GuideMgr";
+import ResMgr from "../public/ResMgr";
+import LangUtils from "../com/utils/LangUtils";
+// import MenuMgr from "../../Modules/Menu/script/MenuMgr";
 
-class Register{
+export default class Register{
+    public static dict:any={};
     constructor(){
         this.init();
         this.reg();
     }
     private reg(){
+        new LoadMgr();
         new LayerMgr();
-        new FightMgr();
-        new SandboxMgr();
-        new FightPrepareMgr();
-        new SkillMgr();
-        new TopbarMgr();
-        new GuideMgr();
-        //register your module on here 
-        // new ResMgr();
+        // Register.regModule(MenuMgr);
+        //todo
+        //register your module on here
+        //end
+        new ResMgr();
+    }
+    public static regModule(key:string,cls:any){
+        let mdl=Register.dict;
+        let obj=mdl[key];
+        if(obj)return;
+        new cls();
+        Register.dict[key]=true;
     }
     private init(){
+        LangUtils.init();
     }
 }
-module.exports=Register;
+window["Register"]=Register;

@@ -1,12 +1,12 @@
 /**
  * @ Author: phhui
- * @ Create Time: 2021-01-27 09:09:18
- * @ Modified by: Your name
- * @ Modified time: 2021-03-30 21:52:41
+ * @ Create Time: 2021-08-20 09:56:17
+ * @ Modified by: phhui
+ * @ Modified time: 2021-08-27 17:44:55
  * @ Description:
  */
 
-class DataHelper{
+export default class DataHelper{
 		static self: DataHelper = new DataHelper();
 		private dict: Object = {};
 		private total: Object = {};
@@ -28,8 +28,6 @@ class DataHelper{
 		 * @return
 		 */
 		public getData(key: string): Object{
-			let data=this.dataDict[key];
-			if(typeof(data)=="function")return data();
             return this.dataDict[key];
 		}
 		public delData(key:string){

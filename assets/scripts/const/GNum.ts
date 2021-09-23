@@ -1,4 +1,4 @@
-class GNum{
+export default class GNum{
     public static  MAXLEN_NAME=22;	//名字长度
     public static  MAXLEN_URL=160;//url长度
     public static  STRMAXLEN_KEY=16;//CheckKey长度
@@ -12,6 +12,12 @@ class GNum{
     public static RateScale:number =1000;//千分比
     public static ADDelay:number = 3.2;//与广告同时出现的按钮延迟出现x秒
     //--------------------------------------------------数字显示缩写 如 100000写成10万
+    /**千 */
+    public static Thousand=1000;//千
+    /**百万 */
+    public static Million=1000000;//百万
+    /**十亿 */
+    public static Billion=1000000000;//十亿
     /**中文数量单位对应的值10000 */
     public static CnNumUnit:number=10000;
     /**英文数量单位对应的值1000 */

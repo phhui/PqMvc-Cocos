@@ -3,7 +3,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-class ScreenAdaptor extends cc.Component {
+export default class ScreenAdaptor extends cc.Component {
 
     start () {
         ScreenAdaptor.Adaptor(this.node);

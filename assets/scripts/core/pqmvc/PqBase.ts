@@ -1,4 +1,15 @@
-class PqBase{	
+/**
+ * @ Author: phhui
+ * @ Create Time: 2021-08-20 09:56:17
+ * @ Modified by: phhui
+ * @ Modified time: 2021-08-27 17:45:15
+ * @ Description:
+ */
+
+import DbMgr from "../mgr/DbMgr";
+import PqMgr from "./PqMgr";
+
+export default class PqBase{	
     protected __md:PqMgr;
     constructor(){
 
@@ -6,10 +17,6 @@ class PqBase{
 	public set Mgr(m:PqMgr){
 		if(this.__md!=null)throw new Error("PqMgr已赋值");
 		this.__md=m;
-	}
-	/**监听消息，并自动移除 */
-	protected once(event:string,callBack:Function){
-		this.__md.once(event,callBack,this);
 	}
 	/**监听消息**/
 	protected on(event:string,callBack:Function){
@@ -24,6 +31,10 @@ class PqBase{
 		args.unshift(name);
 		this.__md.emit.apply(null,args);
 	}
+	/**获取代理 */
+	public getProxy(name:string){
+		return this.__md.getProxy(name);
+	}
 	/**
 	 *获取共享数据 
 	 * @param key 钥匙
@@ -35,7 +46,7 @@ class PqBase{
 		args.unshift(key);
 		return this.__md.getData.apply(null,args);
 	}
-	public shareData(key:string,data:any){
+	public shareData(key:string,data:Function){
 		this.__md.shareData(key,data);
 	}
 	public delData(key:string){

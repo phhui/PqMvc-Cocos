@@ -2,10 +2,13 @@
  * @ Author: phhui
  * @ Create Time: 2021-01-27 09:09:18
  * @ Modified by: phhui
- * @ Modified time: 2021-03-30 22:01:16
+ * @ Modified time: 2021-01-28 16:53:27
  * @ Description:
  */
-class ColorUtils{
+
+import NumUtils from "./NumUtils";
+
+export default class ColorUtils{
     public static DefColor:cc.Color=cc.color().fromHEX("603015");
     public static RedColor:cc.Color=cc.color().fromHEX("ff0000");
     public static GreenColor:cc.Color=cc.color().fromHEX("008000");
@@ -50,4 +53,10 @@ class ColorUtils{
         nd.color=cc.color(0,0,0);
         nd.opacity=126;
     }
+    /**取消置灰 */
+    public static unSetGray(nd:cc.Node){
+        nd.color=cc.color(255,255,255);
+        nd.opacity=255;
+    }
 }
+window["ColorUtils"]=ColorUtils;

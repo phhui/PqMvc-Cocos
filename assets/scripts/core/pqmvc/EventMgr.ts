@@ -1,12 +1,12 @@
 /**
  * @ Author: phhui
- * @ Create Time: 2021-01-27 09:09:18
- * @ Modified by: Your name
- * @ Modified time: 2021-03-30 21:53:20
+ * @ Create Time: 2021-08-20 09:56:17
+ * @ Modified by: phhui
+ * @ Modified time: 2021-09-04 12:06:12
  * @ Description:
  */
 
-class EventMgr{
+export default class EventMgr{
     public static listenList:Object={};
     public static _objPool:Array<any>=[];
     public static _ctrl:Object={};
@@ -27,10 +27,9 @@ class EventMgr{
     }
     public static checkRepeat(key:string,func:Function,target:any){
         if(!this.listenList[key])return false;
-        let n:number=this.listenList[key].length;
-        for(let i:number=0;i<n;i++){
+        for(let i:number=0;i<this.listenList[key].length;i++){
             let obj:any=this.listenList[key][i];
-            if(obj.key==key&&obj.target.uuid===target.uuid)return true;
+            if(obj.key==key&&obj.target===target)return true;
         }
         return false;
     }
@@ -40,14 +39,12 @@ class EventMgr{
     public static off(key:string,target:any=null){
         if(this.listenList[key]){
             if(target){
-                let n:number=this.listenList[key].length;
-                for(let i:number=0;i<n;i++){
+                for(let i:number=0;i<this.listenList[key].length;i++){
                     let obj:any=this.listenList[key][i];
                     if(obj.key==key&&obj.target.uuid===target.uuid){
                         this._freeObj(this.listenList[key][i]);
                         this.listenList[key][i]=null;
                         this.listenList[key].splice(i,1);
-                        return;
                     }
                 }
             }else if(this.listenList[key].length>1){
@@ -62,8 +59,7 @@ class EventMgr{
         if(this._ctrl[key])args.unshift(key);
         if(this.listenList[key]){
             let list=this.listenList[key];
-            let n:number=list.length;
-            for(let i:number=0;i<n;i++){
+            for(let i:number=0;i<list.length;i++){
                 let obj:any=list[i];
                 if(obj.once){
                     this.listenList[key][i]=null;
@@ -106,4 +102,3 @@ class EventMgr{
         this._objPool.push(obj);
     }
 }
-window["EventMgr"]=EventMgr;

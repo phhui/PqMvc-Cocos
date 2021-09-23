@@ -1,12 +1,18 @@
 /**
  * @ Author: phhui
- * @ Create Time: 2021-01-27 09:09:19
+ * @ Create Time: 2021-08-20 09:56:17
  * @ Modified by: phhui
- * @ Modified time: 2021-03-30 21:57:59
+ * @ Modified time: 2021-08-27 17:47:46
  * @ Description:
  */
 
-class PqMvc extends BaseObject{
+import BaseObject from "./BaseObject";
+import DataHelper from "./DataHelper";
+import EventMgr from "./EventMgr";
+import ProxyMgr from "./ProxyMgr";
+
+export default class PqMvc extends BaseObject{
+	public static pxyDict:any={};
 	constructor(){
 		super();
 	}
@@ -25,6 +31,19 @@ class PqMvc extends BaseObject{
 	}
 	public remove(event:string,func:Function=null,target:any=null){
 		EventMgr.off(event,target);
+	}
+	protected regProxy(name:string,mod:any):void{
+		ProxyMgr.reg(name,mod);
+		mod.Mgr=this;
+	}
+	protected proxy(name:string,param:Object,type:string=null):void{
+		let pxy=ProxyMgr.getPxy(name);
+		if(pxy)pxy.execute(param,type);
+		else throw new Error("proxy :"+name+"未注册");
+	}
+	/**获取proxy**/
+	public getProxy(name:string):any{
+		return ProxyMgr.getPxy(name);
 	}
 	public shareData(key: string, data: any): void{
 		DataHelper.self.shareData(key, data);

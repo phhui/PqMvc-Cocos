@@ -1,4 +1,4 @@
-class GroupVo{
+export default class GroupVo{
     public name:string;
     public keys:Array<string>;
     constructor(data:any=null){

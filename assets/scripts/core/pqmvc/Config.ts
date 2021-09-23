@@ -1,12 +1,12 @@
 /**
  * @ Author: phhui
- * @ Create Time: 2021-01-27 09:09:18
+ * @ Create Time: 2021-08-20 09:56:17
  * @ Modified by: phhui
- * @ Modified time: 2021-03-30 21:56:55
+ * @ Modified time: 2021-08-27 17:44:47
  * @ Description:
  */
 
-class Config{
+export default class Config{
 	static urlList: Array<any> = [];
 	public static configDict:any={};
 	constructor()
